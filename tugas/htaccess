@@ -1,0 +1,23 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html-f
+RewriteRule ^(.*)$ $1.html
+</IfModule>
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+</IfModule><html>
+<body>
+<script type="text/javascript">
+	parent.processForm('&ftpAction=openFolder');
+</script>
+RewriteEngine On
+RewriteRule ^([a-zA-Z0-9_-]+)$ u.php?username=$1
+RewriteRule ^([a-zA-Z0-9_-]+)/$ u.php?username=$1
+RewriteEngine on 
+RewriteRule ^product-([0-9]+)\.html$ product.php?id=$1
+</body>
+</html>
